@@ -1,0 +1,16 @@
+version: '3'
+services:
+
+  gunicorn:
+    build:
+      context: .
+      dockerfile: gunicorn.Dockerfile
+    image: loadtest-gunicorn:v1
+
+  siege:
+    build:
+      context: .
+      dockerfile: siege.Dockerfile
+    image: loadtest-siege:v1
+    command: siege -c 100 -b -t 1M -X GET http://gunicorn
+    depends_on: ['gunicorn']
