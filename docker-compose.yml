@@ -12,5 +12,5 @@ services:
       context: .
       dockerfile: siege.Dockerfile
     image: loadtest-siege:v1
-    command: siege -c 100 -b -t 1M -X GET http://gunicorn
+    command: siege -c 100 -b -t 1M http://gunicorn
     depends_on: ['gunicorn']
