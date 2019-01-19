@@ -94,3 +94,27 @@ Failed transactions:                 0
 Longest transaction:              1.06
 Shortest transaction:             1.00
 ```
+
+## 5
+- __request_time__: `random.random() * 60`
+- __worker_count__: 9
+- __worker_class__: gevent
+- __concurrency__: 100
+- __duration__: 1 minute
+
+
+```
+Lifting the server siege...
+Transactions:                      168 hits
+Availability:                   100.00 %
+Elapsed time:                    59.56 secs
+Data transferred:         0.00 MB
+Response time:                   23.78 secs
+Transaction rate:         2.82 trans/sec
+Throughput:                       0.00 MB/sec
+Concurrency:                     67.07
+Successful transactions:         168
+Failed transactions:                 0
+Longest transaction:             59.52
+Shortest transaction:             0.11
+```

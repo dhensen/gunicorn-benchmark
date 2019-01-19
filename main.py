@@ -1,10 +1,10 @@
 from time import sleep
-# from random import random
+from random import random
 
 def app(environ, start_response):
     """Simplest possible application object"""
-    # sleep(random() * 60)
-    sleep(1)
+    sleep(random() * 60)
+    # sleep(1)
     data = b'Hello, World!\n'
     status = '200 OK'
     response_headers = [
