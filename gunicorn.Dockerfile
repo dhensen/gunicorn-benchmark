@@ -12,5 +12,5 @@ RUN pipenv install --deploy --system
 
 COPY main.py /app/main.py
 
-CMD gunicorn --workers=9 --worker-class="eventlet" --bind=0.0.0.0:80 main:app
+CMD gunicorn --workers=9 --worker-class="gevent" --bind=0.0.0.0:80 main:app
 EXPOSE 80
