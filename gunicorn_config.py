@@ -7,7 +7,7 @@
 
 backlog = 10240
 
-workers = 9
+workers = 4
 worker_connections = 1000
 worker_class = 'eventlet'
 

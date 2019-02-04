@@ -11,7 +11,7 @@ flake8 = "*"
 gunicorn = {editable = true,git = "https://github.com/benoitc/gunicorn.git",ref = "master"}
 eventlet = "*"
 gevent = "*"
-locust = "*"
+locustio = "*"
 
 [requires]
 python_version = "3.7"
